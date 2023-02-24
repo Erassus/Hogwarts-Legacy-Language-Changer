@@ -7,7 +7,7 @@
     <img src="https://freepngimg.com/download/hat/107809-hat-sorting-potter-harry-free-png-hq.png" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">Hogwarts Legacy Language Changer</h3>
 
   <p align="center">
     A simple Language Changer for Hogwarts Legacy (EMPRESS release or DODI Repack)

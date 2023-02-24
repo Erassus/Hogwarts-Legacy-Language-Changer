@@ -13,6 +13,7 @@
     A simple Language Changer for Hogwarts Legacy (EMPRESS release or DODI Repack)
     <br />
     <img src="https://i.imgur.com/SiKr8e1.png" alt="Screenshot">
+    <br />
     <a href="https://github.com/erassus/Hogwarts-Legacy-Language-Changer/issues">Report Bug</a>
     ·
     <a href="https://github.com/erassus/Hogwarts-Legacy-Language-Changer/issues">Request Feature</a>

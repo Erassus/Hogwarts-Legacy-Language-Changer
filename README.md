@@ -15,7 +15,7 @@
     Download from <a href="https://github.com/Erassus/Hogwarts-Legacy-Language-Changer/releases">here</a>
     <br />
     <br />
-    <img src="https://i.imgur.com/SiKr8e1.png" alt="Screenshot">
+    <img src="https://i.imgur.com/crAbNoM.png" alt="Screenshot">
     <br />
     <a href="https://github.com/erassus/Hogwarts-Legacy-Language-Changer/issues">Report Bug</a>
     ·

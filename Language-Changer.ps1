@@ -22,16 +22,19 @@ function Lang-Menu
     Write-Host " Current Language is: $viewLang" -ForegroundColor Yellow
 	Write-Host ""
     Write-Host " Press '1' for English"
-    Write-Host " Press '2' for Spanish (Latam)"
-    Write-Host " Press '3' for Spanish (Spain)"
-    Write-Host " Press '4' for Portuguese (Brazil)"
-    Write-Host " Press '5' for Polish"
-    Write-Host " Press '6' for Russian"
-    Write-Host " Press '7' for Arabic"
-    Write-Host " Press '8' for Japanese"
-    Write-Host " Press '9' for Korean"
-    Write-Host " Press '0' for Simplified Chinese"
-    Write-Host " Press '*' for Traditional Chinese"
+    Write-Host " Press '2' for French"
+    Write-Host " Press '3' for German"
+    Write-Host " Press '4' for Italian"
+    Write-Host " Press '5' for Spanish (Spain)"
+    Write-Host " Press '6' for Portuguese (Brazil)"
+    Write-Host " Press '7' for Polish"
+    Write-Host " Press '8' for Russian"
+    Write-Host " Press '9' for Spanish (Latin America)"
+    Write-Host " Press '10' for Arabic"
+    Write-Host " Press '11' for Japanese"
+    Write-Host " Press '12' for Korean"
+    Write-Host " Press '13' for Simplified Chinese"
+    Write-Host " Press '14' for Traditional Chinese"
 	Write-Host ""
     Write-Host " Press 'X' or CTRL+C to abort" -ForegroundColor DarkGray
 	Write-Host ""
@@ -58,11 +61,14 @@ $currentLang = $currentLang -replace 'Language=',''
 # Setting up steamworks API language codes variables
 	
 if ($currentLang -eq 'english') { $viewLang = 'English' }
-if ($currentLang -eq 'latam') { $viewLang = 'Spanish (Latam)' }
+if ($currentLang -eq 'french') { $viewLang = 'French' }
+if ($currentLang -eq 'german') { $viewLang = 'German' }
+if ($currentLang -eq 'italian') { $viewLang = 'Italian' }
 if ($currentLang -eq 'spanish') { $viewLang = 'Spanish (Spain)' }
 if ($currentLang -eq 'brazilian') { $viewLang = 'Portuguese (Brazil)' }
 if ($currentLang -eq 'polish') { $viewLang = 'Polish' }
 if ($currentLang -eq 'russian') { $viewLang = 'Russian' }
+if ($currentLang -eq 'latam') { $viewLang = 'Spanish (Latin America)' }
 if ($currentLang -eq 'arabic') { $viewLang = 'Arabic' }
 if ($currentLang -eq 'japanese') { $viewLang = 'Japanese' }
 if ($currentLang -eq 'koreana') { $viewLang = 'Korean' }
@@ -74,6 +80,7 @@ if ($currentLang -eq 'tchinese') { $viewLang = 'Traditional Chinese' }
     $selection = Read-Host " Please make a selection"
 	 
     switch ($selection) {
+		# English
         '1' {
 			Write-Host ""
 			((Get-Content -path "$envLangFile") -replace "$currentLang",'english') | Set-Content -Path $envLangFile
@@ -81,71 +88,104 @@ if ($currentLang -eq 'tchinese') { $viewLang = 'Traditional Chinese' }
 			Write-Host ""
 			Pause
 			}
-			 
+		# French	 
 		'2' {
 			Write-Host ""
-			((Get-Content -path "$envLangFile") -replace "$currentLang",'latam') | Set-Content -Path $envLangFile
-            Write-Host " Game language changed to Spanish (Latam)" -ForegroundColor Green
+			((Get-Content -path "$envLangFile") -replace "$currentLang",'french') | Set-Content -Path $envLangFile
+            Write-Host " Game language changed to French" -ForegroundColor Green
 			Write-Host ""
 			Pause
          }
+		 # German
 		'3' {
+			Write-Host ""
+			((Get-Content -path "$envLangFile") -replace "$currentLang",'german') | Set-Content -Path $envLangFile
+            Write-Host " Game language changed to German" -ForegroundColor Green
+			Write-Host ""
+			Pause
+         }
+		 # Italian
+		'4' {
+			Write-Host ""
+			((Get-Content -path "$envLangFile") -replace "$currentLang",'italian') | Set-Content -Path $envLangFile
+            Write-Host " Game language changed to Italian" -ForegroundColor Green
+			Write-Host ""
+			Pause
+         }
+		 # Spanish (Spain)
+		'5' {
 			Write-Host ""
 			((Get-Content -path "$envLangFile") -replace "$currentLang",'spanish') | Set-Content -Path $envLangFile
             Write-Host " Game language changed to Spanish (Spain)" -ForegroundColor Green
 			Write-Host ""
 			Pause
          }
-		'4' {
+		 # Portuguese (Brazil)
+		'6' {
 			Write-Host ""
 			((Get-Content -path "$envLangFile") -replace "$currentLang",'brazilian') | Set-Content -Path $envLangFile
             Write-Host " Game language changed to Portuguese (Brazil)" -ForegroundColor Green
 			Write-Host ""
 			Pause
          }
-		'5' {
+		 # Polish
+		'7' {
 			Write-Host ""
 			((Get-Content -path "$envLangFile") -replace "$currentLang",'polish') | Set-Content -Path $envLangFile
             Write-Host " Game language changed to Polish" -ForegroundColor Green
 			Write-Host ""
 			Pause
          }
-		'6' {
+		 # Russian
+		'8' {
 			Write-Host ""
 			((Get-Content -path "$envLangFile") -replace "$currentLang",'russian') | Set-Content -Path $envLangFile
             Write-Host " Game language changed to Russian" -ForegroundColor Green
 			Write-Host ""
 			Pause
          }
-		'7' {
+		 # Spanish (Latin America)
+		'9' {
+			Write-Host ""
+			((Get-Content -path "$envLangFile") -replace "$currentLang",'latam') | Set-Content -Path $envLangFile
+            Write-Host " Game language changed to Spanish (Latin America)" -ForegroundColor Green
+			Write-Host ""
+			Pause
+         }
+		 # Arabic
+		'10' {
 			Write-Host ""
 			((Get-Content -path "$envLangFile") -replace "$currentLang",'arabic') | Set-Content -Path $envLangFile
             Write-Host " Game language changed to Arabic" -ForegroundColor Green
 			Write-Host ""
 			Pause
          }
-		'8' {
+		 # Japanese
+		'11' {
 			Write-Host ""
 			((Get-Content -path "$envLangFile") -replace "$currentLang",'japanese') | Set-Content -Path $envLangFile
             Write-Host " Game language changed to Japanese" -ForegroundColor Green
 			Write-Host ""
 			Pause
          }
-		'9' {
+		 # Korean
+		'12' {
 			Write-Host ""
 			((Get-Content -path "$envLangFile") -replace "$currentLang",'koreana') | Set-Content -Path $envLangFile
             Write-Host " Game language changed to Korean" -ForegroundColor Green
 			Write-Host ""
 			Pause
          }
-		'0' {
+		 # Simplified Chinese
+		'13' {
 			Write-Host ""
 			((Get-Content -path "$envLangFile") -replace "$currentLang",'schinese') | Set-Content -Path $envLangFile
             Write-Host " Game language changed to Simplified Chinese" -ForegroundColor Green
 			Write-Host ""
 			Pause
          }
-		'*' {
+		 # Traditional Chinese
+		'14' {
 			Write-Host ""
 			((Get-Content -path "$envLangFile") -replace "$currentLang",'tchinese') | Set-Content -Path $envLangFile
             Write-Host " Game language changed to Traditional Chinese" -ForegroundColor Green
